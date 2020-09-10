@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <head>
   <title><em>Olha Sqvchenko 1395ae</em></title>
-  <meta charset="UTF-8">
-</head>
-<body>
-<p>09/09/2020</p>
-<h1><strong>Programming languages</strong></h1>
-<span class>HTML</span>
-<span style="color:green"></span>
-<div>CSS,JavaScript</div>
-<ul>
-<li>Java</li>
-<li>Python</li>
-<li>C++</li>
-</ul>
-<a href="http://htmlbook.ru/blog/shablony-html5" target="_blank">Press to explore HTML</a>
-<a href="http://htmlbook.ru/css" target="_blank">CSS Guidance</a>
-<a href="http://htmlbook.ru/faq/kak-razmestit-neskolko-kartinok-ryadom-po-gorizontali" target="_blank">Moving pictures</a>
+  <?php
+  $stuff=array("1","2","3","4","5","6");
+foreach($stuff as $k=>$v){
+if(count($stuff)<$k){
+echo ("Your guess is too high\n"};}
+if(count($stuff)>$k){
+echo("Your guess is too low\n");}
+if (array_key_exists($key.$stuff)&&array_key_exists($value.$stuff)){
+echo("key and value are set\n");}
+else{ echo("Missing guess parameters\n");}
+  if($k===$v){
+  echo("Congratulations-You are right\n");}
+  else{("Your guess is not a number");}
+  ?>
 </body>
 </html>
