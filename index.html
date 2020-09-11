@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<head>
-  <title><em>Olha Sqvchenko ace5937f</em></title>
-  <?php
-  $stuff=array("1","2","3","4","5","6");
-foreach($stuff as $k=>$v){
-if(count($stuff)<$k){
-echo ("Your guess is too high\n"};}
-if(count($stuff)>$k){
-echo("Your guess is too low\n");}
-if (array_key_exists($key.$stuff)&&array_key_exists($value.$stuff)){
-echo("key and value are set\n");}
-else{ echo("Missing guess parameters\n");}
-  if($k===$v){
-  echo("Congratulations-You are right\n");}
-  else{("Your guess is not a number");}
-  ?>
+<?php
+$number=$_POST['number_entered'];
+$submitbutton=$_POST['submit'];
+$randomnumber=mt_rand(1,10);
+?>
+<form action=""method="POST">
+guess a number between 1 and 10:
+<input type="text"name="number-entered"value="/><br><br>
+Result:
+<?php
+if(submitbutton){
+if($number==$randomnumber){
+echo "Congratulations";
+else"the correct number was $randomnumber";}
+if($number>$randomnumber){
+echo"The guess is too high";
+}
+if($number<$randomnumber){
+echo "the guess is too low";}
+if(is_numeric($number)){
+echo"you've chosen $number";}
+else{echo"give me numeric values";}
+}
+?>
+<br><br>,input type="submit"name="submit"value="search"/>
+</br></br></form>
 </body>
 </html>
